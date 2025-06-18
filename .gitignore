@@ -6,6 +6,7 @@ test_runner
 *.so
 *.o
 *.obj
+*.vala.c
 
 # Dossiers de build / cache
 build/
