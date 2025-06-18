@@ -1,0 +1,32 @@
+# Binaires générés
+amalgame
+test_runner
+*.exe
+*.dll
+*.so
+*.o
+*.obj
+
+# Dossiers de build / cache
+build/
+bin/
+obj/
+
+# Fichiers temporaires
+*~
+*.tmp
+*.bak
+
+# Visual Studio Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# Configuration utilisateur / IDE
+.idea/
+*.user
+*.suo
