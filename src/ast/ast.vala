@@ -24,7 +24,7 @@ public class BlockNode : AstNode {
     public override void print(int indent) {
         foreach (var stmt in statements) {
             print_indent(indent);
-            print("%s\n", stmt);
+            stdout.printf("%s\n", stmt);
         }
     }
 
@@ -39,7 +39,7 @@ public class FunctionNode : AstNode {
     public List<Parameter> parameters;
     public BlockNode body;
 
-    public FunctionNode(string return_type, string name, List<Parameter> parameters, BlockNode body) {
+    public FunctionNode(string return_type, string name, unowned List<Parameter> parameters, BlockNode body) {
         this.return_type = return_type;
         this.name = name;
         this.parameters = parameters;

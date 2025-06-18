@@ -1,11 +1,10 @@
 // utils.vala
 
-public static string load_file(string path) {
+public static string read_file_contents(string path) {
     try {
-        File file = File.new_for_path(path);
-        char[] contents;
-        file.load_contents(null, out contents, null);
-        return (string) contents;
+        string contents;
+        FileUtils.get_contents (path, out contents);
+        return contents;
     } catch (Error e) {
         stderr.printf("Erreur : %s\n", e.message);
         return "";

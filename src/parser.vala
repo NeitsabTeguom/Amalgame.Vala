@@ -19,7 +19,7 @@ public class Parser {
             do {
                 string type = consume(TokenType.IDENTIFIER).lexeme;
                 string pname = consume(TokenType.IDENTIFIER).lexeme;
-                parameters = parameters.append(new Parameter(type, pname));
+                parameters.append(new Parameter(type, pname));
             } while (match_symbol(","));
         }
 
@@ -28,7 +28,7 @@ public class Parser {
 
         var body = new BlockNode();
         while (!check_symbol("}")) {
-            body.statements = body.statements.append(current.lexeme);
+            body.statements.append(current.lexeme);
             advance();
         }
 
